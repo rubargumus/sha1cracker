@@ -14,12 +14,12 @@ try:
                 if hashed_word == hash:
                     return word
 
-        return "Kelime bulunamadı."
+        return "Bulunamadı."
 
     veritabanindaki_hash = sys.argv[2]
     kelime_listesi = sys.argv[1]
 
     kelime = crack_sha1_hash(veritabanindaki_hash, kelime_listesi)
-    print("BULUNDU ==>", kelime)
+    print("SONUÇ ==>", kelime)
 except:
     print("HATA TESPİT EDİLDİ ! WORDLİST YADA SHA1 HASH GİRDİ VERDİĞİNİZE EMİN OLUN")
